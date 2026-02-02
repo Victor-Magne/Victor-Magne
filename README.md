@@ -21,6 +21,3 @@ Colaborações em projetos backend/full‑stack, oportunidades para crescer em e
 - Email: `03012008victorgabriel@gmail.com` 
 
 ---
-
-> 💡 Dica: para exibir este README no seu perfil do GitHub crie um repositório com o mesmo nome do seu usuário (ex.: `Victor-Magne/Victor-Magne`) e adicione este arquivo como `README.md`.
-
