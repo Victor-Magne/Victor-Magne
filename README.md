@@ -9,6 +9,8 @@
 <br /><br />
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-gabriel-gomes-a5a2b3356)
+[![X](https://img.shields.io/badge/X-@VictorG43760963-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/VictorG43760963)
+[![Instagram](https://img.shields.io/badge/Instagram-@03012008victorgabriel-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/03012008victorgabriel/)
 [![Email](https://img.shields.io/badge/Email-03012008victorgabriel%40gmail.com-171717?style=for-the-badge&logo=gmail&logoColor=white)](mailto:03012008victorgabriel@gmail.com)
 
 </div>
