@@ -1,172 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 306" width="800" height="306" role="img" aria-label="Tech Stack — Victor Gomes">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" role="img" aria-label="Loading packages — Victor Gomes Tech Stack">
   <defs>
-    <linearGradient id="card-bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="100%" stop-color="#f6f8fa" />
+    </linearGradient>
+    <linearGradient id="bar-light" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#16a34a" />
     </linearGradient>
     <style>
       .mono {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       }
-      .sans {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      .ln { font-size: 12px; fill: #8c959f; }
+      .kw { font-size: 12.5px; fill: #cf222e; }
+      .id { font-size: 12.5px; fill: #8250df; }
+      .op { font-size: 12.5px; fill: #57606a; }
+      .key { font-size: 12.5px; fill: #0550ae; }
+      .str { font-size: 12.5px; fill: #0a3069; }
+      .ok { font-size: 12px; fill: #16a34a; font-weight: 700; }
+
+      @keyframes progressLoop {
+        0% { transform: scaleX(0.02); }
+        10% { transform: scaleX(0.2); }
+        20% { transform: scaleX(0.4); }
+        30% { transform: scaleX(0.6); }
+        40% { transform: scaleX(0.8); }
+        50%, 92% { transform: scaleX(1); }
+        97%, 100% { transform: scaleX(0.02); }
       }
-      .cat-title {
-        font-size: 12px;
-        font-weight: 600;
-        fill: #57606a;
-        letter-spacing: 0.4px;
+      @keyframes row1 {
+        0%, 4% { opacity: 0; transform: translateX(-6px); }
+        9%, 92% { opacity: 1; transform: translateX(0); }
+        97%, 100% { opacity: 0; transform: translateX(-6px); }
       }
-      .pill {
-        fill: #ffffff;
-        stroke: #d0d7de;
-        stroke-width: 1;
+      @keyframes row2 {
+        0%, 14% { opacity: 0; transform: translateX(-6px); }
+        19%, 92% { opacity: 1; transform: translateX(0); }
+        97%, 100% { opacity: 0; transform: translateX(-6px); }
       }
-      .pill-text {
-        font-size: 12px;
-        font-weight: 500;
-        fill: #1f2328;
+      @keyframes row3 {
+        0%, 24% { opacity: 0; transform: translateX(-6px); }
+        29%, 92% { opacity: 1; transform: translateX(0); }
+        97%, 100% { opacity: 0; transform: translateX(-6px); }
       }
-      @keyframes cardIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
+      @keyframes row4 {
+        0%, 34% { opacity: 0; transform: translateX(-6px); }
+        39%, 92% { opacity: 1; transform: translateX(0); }
+        97%, 100% { opacity: 0; transform: translateX(-6px); }
       }
-      @keyframes dotPulse {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.4; transform: scale(0.8); }
+      @keyframes row5 {
+        0%, 44% { opacity: 0; transform: translateX(-6px); }
+        49%, 92% { opacity: 1; transform: translateX(0); }
+        97%, 100% { opacity: 0; transform: translateX(-6px); }
       }
-      .c1 { opacity: 0; animation: cardIn 0.45s ease-out 0.05s forwards; }
-      .c2 { opacity: 0; animation: cardIn 0.45s ease-out 0.15s forwards; }
-      .c3 { opacity: 0; animation: cardIn 0.45s ease-out 0.25s forwards; }
-      .c4 { opacity: 0; animation: cardIn 0.45s ease-out 0.35s forwards; }
-      .c5 { opacity: 0; animation: cardIn 0.45s ease-out 0.45s forwards; }
-      .dot {
+      @keyframes doneRow {
+        0%, 50% { opacity: 0; }
+        55%, 92% { opacity: 1; }
+        97%, 100% { opacity: 0; }
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes spinDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+
+      .progress-fill {
         transform-box: fill-box;
-        transform-origin: center;
-        animation: dotPulse 2.6s ease-in-out infinite;
+        transform-origin: left center;
+        animation: progressLoop 12s ease-in-out infinite;
       }
-      .d1 { animation-delay: 0s; }
-      .d2 { animation-delay: 0.4s; }
-      .d3 { animation-delay: 0.8s; }
-      .d4 { animation-delay: 1.2s; }
-      .d5 { animation-delay: 1.6s; }
+      .r1 { animation: row1 12s ease-out infinite; }
+      .r2 { animation: row2 12s ease-out infinite; }
+      .r3 { animation: row3 12s ease-out infinite; }
+      .r4 { animation: row4 12s ease-out infinite; }
+      .r5 { animation: row5 12s ease-out infinite; }
+      .rdone { animation: doneRow 12s ease-out infinite; }
+      .cursor { animation: blink 1s infinite; }
+      .live-dot { animation: spinDot 1.6s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Card 1: Backend -->
-  <g class="c1">
-    <rect x="1" y="1" width="390" height="112" rx="10" fill="url(#card-bg-light)" stroke="#d0d7de" stroke-width="1.2" />
-    <circle cx="20" cy="22" r="4" fill="#FF2D20" class="dot d1" />
-    <text x="32" y="26" class="mono cat-title">// BACKEND</text>
+  <!-- Container -->
+  <rect x="1" y="1" width="798" height="328" rx="12" fill="url(#bg-light)" stroke="#d0d7de" stroke-width="1.5" />
 
-    <rect x="18" y="40" width="72" height="26" rx="6" class="pill" />
-    <circle cx="31" cy="53" r="4" fill="#777BB4" />
-    <text x="41" y="57" class="sans pill-text">PHP</text>
+  <!-- Top window bar -->
+  <circle cx="24" cy="22" r="5" fill="#ff5f56" />
+  <circle cx="42" cy="22" r="5" fill="#ffbd2e" />
+  <circle cx="60" cy="22" r="5" fill="#27c93f" />
+  <text x="400" y="26" text-anchor="middle" class="mono" font-size="12" fill="#57606a">stack.ts — loading packages</text>
+  <circle cx="712" cy="22" r="3.5" fill="#0284c7" class="live-dot" />
+  <text x="722" y="26" class="mono" font-size="11" fill="#57606a">20 pkgs</text>
 
-    <rect x="98" y="40" width="90" height="26" rx="6" class="pill" />
-    <circle cx="111" cy="53" r="4" fill="#FF2D20" />
-    <text x="121" y="57" class="sans pill-text">Laravel</text>
+  <line x1="16" y1="40" x2="784" y2="40" stroke="#e5e7eb" stroke-width="1" />
 
-    <rect x="196" y="40" width="96" height="26" rx="6" class="pill" />
-    <circle cx="209" cy="53" r="4" fill="#FDAE4B" />
-    <text x="219" y="57" class="sans pill-text">Filament</text>
+  <!-- Command & Progress bar -->
+  <text x="24" y="64" class="mono" font-size="12.5" fill="#0284c7">$ <tspan fill="#1f2328">load-stack</tspan> <tspan fill="#57606a">--env=production --verify</tspan></text>
+  <rect x="24" y="76" width="752" height="5" rx="2.5" fill="#eaeef2" />
+  <rect x="24" y="76" width="752" height="5" rx="2.5" fill="url(#bar-light)" class="progress-fill" />
 
-    <rect x="18" y="74" width="94" height="26" rx="6" class="pill" />
-    <circle cx="31" cy="87" r="4" fill="#4E56A6" />
-    <text x="41" y="91" class="sans pill-text">Livewire</text>
+  <!-- Code lines -->
+  <!-- 01 -->
+  <text x="24" y="114" class="mono ln">01</text>
+  <text x="52" y="114" class="mono"><tspan class="kw">const</tspan> <tspan class="id">stack</tspan> <tspan class="op">= {</tspan></text>
 
-    <rect x="120" y="74" width="108" height="26" rx="6" class="pill" />
-    <circle cx="133" cy="87" r="4" fill="#885630" />
-    <text x="143" y="91" class="sans pill-text">Composer</text>
+  <!-- 02 Backend -->
+  <g class="r1">
+    <text x="24" y="142" class="mono ln">02</text>
+    <text x="68" y="142" class="mono"><tspan class="key">backend</tspan><tspan class="op">:    [</tspan> <tspan class="str">"PHP"</tspan><tspan class="op">,</tspan> <tspan class="str">"Laravel"</tspan><tspan class="op">,</tspan> <tspan class="str">"Filament"</tspan><tspan class="op">,</tspan> <tspan class="str">"Livewire"</tspan><tspan class="op">,</tspan> <tspan class="str">"Composer"</tspan> <tspan class="op">],</tspan></text>
+    <text x="764" y="142" class="mono ok">✓</text>
   </g>
 
-  <!-- Card 2: Systems & Desktop -->
-  <g class="c2">
-    <rect x="409" y="1" width="390" height="112" rx="10" fill="url(#card-bg-light)" stroke="#d0d7de" stroke-width="1.2" />
-    <circle cx="428" cy="22" r="4" fill="#ea580c" class="dot d2" />
-    <text x="440" y="26" class="mono cat-title">// SYSTEMS &amp; DESKTOP</text>
-
-    <rect x="426" y="40" width="76" height="26" rx="6" class="pill" />
-    <circle cx="439" cy="53" r="4" fill="#1f2328" />
-    <text x="449" y="57" class="sans pill-text">Rust</text>
-
-    <rect x="510" y="40" width="84" height="26" rx="6" class="pill" />
-    <circle cx="523" cy="53" r="4" fill="#ea580c" />
-    <text x="533" y="57" class="sans pill-text">Cargo</text>
-
-    <rect x="602" y="40" width="100" height="26" rx="6" class="pill" />
-    <circle cx="615" cy="53" r="4" fill="#0078D4" />
-    <text x="625" y="57" class="sans pill-text">Windows</text>
-
-    <rect x="426" y="74" width="80" height="26" rx="6" class="pill" />
-    <circle cx="439" cy="87" r="4" fill="#eab308" />
-    <text x="449" y="91" class="sans pill-text">Linux</text>
+  <!-- 03 Systems -->
+  <g class="r2">
+    <text x="24" y="170" class="mono ln">03</text>
+    <text x="68" y="170" class="mono"><tspan class="key">systems</tspan><tspan class="op">:    [</tspan> <tspan class="str">"Rust"</tspan><tspan class="op">,</tspan> <tspan class="str">"Cargo"</tspan><tspan class="op">,</tspan> <tspan class="str">"Windows"</tspan><tspan class="op">,</tspan> <tspan class="str">"Linux"</tspan> <tspan class="op">],</tspan></text>
+    <text x="764" y="170" class="mono ok">✓</text>
   </g>
 
-  <!-- Card 3: Frontend -->
-  <g class="c3">
-    <rect x="1" y="125" width="390" height="92" rx="10" fill="url(#card-bg-light)" stroke="#d0d7de" stroke-width="1.2" />
-    <circle cx="20" cy="146" r="4" fill="#0891b2" class="dot d3" />
-    <text x="32" y="150" class="mono cat-title">// FRONTEND</text>
-
-    <rect x="18" y="168" width="108" height="26" rx="6" class="pill" />
-    <circle cx="31" cy="181" r="4" fill="#eab308" />
-    <text x="41" y="185" class="sans pill-text">JavaScript</text>
-
-    <rect x="134" y="168" width="82" height="26" rx="6" class="pill" />
-    <circle cx="147" cy="181" r="4" fill="#FF2D20" />
-    <text x="157" y="185" class="sans pill-text">Blade</text>
-
-    <rect x="224" y="168" width="124" height="26" rx="6" class="pill" />
-    <circle cx="237" cy="181" r="4" fill="#06B6D4" />
-    <text x="247" y="185" class="sans pill-text">Tailwind CSS</text>
+  <!-- 04 Frontend -->
+  <g class="r3">
+    <text x="24" y="198" class="mono ln">04</text>
+    <text x="68" y="198" class="mono"><tspan class="key">frontend</tspan><tspan class="op">:   [</tspan> <tspan class="str">"JavaScript"</tspan><tspan class="op">,</tspan> <tspan class="str">"Blade"</tspan><tspan class="op">,</tspan> <tspan class="str">"Tailwind CSS"</tspan> <tspan class="op">],</tspan></text>
+    <text x="764" y="198" class="mono ok">✓</text>
   </g>
 
-  <!-- Card 4: Data & Infra -->
-  <g class="c4">
-    <rect x="409" y="125" width="390" height="180" rx="10" fill="url(#card-bg-light)" stroke="#d0d7de" stroke-width="1.2" />
-    <circle cx="428" cy="146" r="4" fill="#0284c7" class="dot d4" />
-    <text x="440" y="150" class="mono cat-title">// DATA &amp; INFRA</text>
-
-    <rect x="426" y="168" width="114" height="26" rx="6" class="pill" />
-    <circle cx="439" cy="181" r="4" fill="#4169E1" />
-    <text x="449" y="185" class="sans pill-text">PostgreSQL</text>
-
-    <rect x="548" y="168" width="88" height="26" rx="6" class="pill" />
-    <circle cx="561" cy="181" r="4" fill="#4479A1" />
-    <text x="571" y="185" class="sans pill-text">MySQL</text>
-
-    <rect x="644" y="168" width="86" height="26" rx="6" class="pill" />
-    <circle cx="657" cy="181" r="4" fill="#0284c7" />
-    <text x="667" y="185" class="sans pill-text">SQLite</text>
-
-    <rect x="426" y="204" width="82" height="26" rx="6" class="pill" />
-    <circle cx="439" cy="217" r="4" fill="#FF4438" />
-    <text x="449" y="221" class="sans pill-text">Redis</text>
-
-    <rect x="516" y="204" width="92" height="26" rx="6" class="pill" />
-    <circle cx="529" cy="217" r="4" fill="#2496ED" />
-    <text x="539" y="221" class="sans pill-text">Docker</text>
-
-    <rect x="616" y="204" width="136" height="26" rx="6" class="pill" />
-    <circle cx="629" cy="217" r="4" fill="#2088FF" />
-    <text x="639" y="221" class="sans pill-text">GitHub Actions</text>
-
-    <text x="426" y="276" class="mono" font-size="11" fill="#6e7781">containers · CI/CD · relational &amp; cache</text>
+  <!-- 05 Data & Infra -->
+  <g class="r4">
+    <text x="24" y="226" class="mono ln">05</text>
+    <text x="68" y="226" class="mono"><tspan class="key">data_infra</tspan><tspan class="op">: [</tspan> <tspan class="str">"PostgreSQL"</tspan><tspan class="op">,</tspan> <tspan class="str">"MySQL"</tspan><tspan class="op">,</tspan> <tspan class="str">"SQLite"</tspan><tspan class="op">,</tspan> <tspan class="str">"Redis"</tspan><tspan class="op">,</tspan> <tspan class="str">"Docker"</tspan><tspan class="op">,</tspan> <tspan class="str">"GitHub Actions"</tspan> <tspan class="op">],</tspan></text>
+    <text x="764" y="226" class="mono ok">✓</text>
   </g>
 
-  <!-- Card 5: Quality -->
-  <g class="c5">
-    <rect x="1" y="229" width="390" height="76" rx="10" fill="url(#card-bg-light)" stroke="#d0d7de" stroke-width="1.2" />
-    <circle cx="20" cy="250" r="4" fill="#16a34a" class="dot d5" />
-    <text x="32" y="254" class="mono cat-title">// QUALITY</text>
+  <!-- 06 Quality -->
+  <g class="r5">
+    <text x="24" y="254" class="mono ln">06</text>
+    <text x="68" y="254" class="mono"><tspan class="key">quality</tspan><tspan class="op">:    [</tspan> <tspan class="str">"Pest"</tspan><tspan class="op">,</tspan> <tspan class="str">"PHPUnit"</tspan> <tspan class="op">],</tspan></text>
+    <text x="764" y="254" class="mono ok">✓</text>
+  </g>
 
-    <rect x="18" y="268" width="76" height="26" rx="6" class="pill" />
-    <circle cx="31" cy="281" r="4" fill="#F05340" />
-    <text x="41" y="285" class="sans pill-text">Pest</text>
+  <!-- 07 -->
+  <text x="24" y="282" class="mono ln">07</text>
+  <text x="52" y="282" class="mono op">};</text>
 
-    <rect x="102" y="268" width="98" height="26" rx="6" class="pill" />
-    <circle cx="115" cy="281" r="4" fill="#777BB4" />
-    <text x="125" y="285" class="sans pill-text">PHPUnit</text>
+  <!-- Footer status -->
+  <line x1="16" y1="296" x2="784" y2="296" stroke="#e5e7eb" stroke-width="1" />
+  <g class="rdone">
+    <text x="24" y="316" class="mono" font-size="11.5" fill="#16a34a">✓ <tspan fill="#57606a">5 modules, 20 packages loaded</tspan><tspan class="cursor" fill="#0284c7"> _</tspan></text>
   </g>
 </svg>
