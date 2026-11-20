@@ -29,10 +29,37 @@ I'm a full-stack developer focused on the **PHP / Laravel** ecosystem, with a gr
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg" />
-  <img src="./assets/stack-dark.svg" width="100%" alt="Tech Stack — Backend, Systems & Desktop, Frontend, Data & Infra, Quality" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-code-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-code-light.svg" />
+  <img src="./assets/stack-code-dark.svg" width="100%" alt="Tech Stack — Loading Packages" />
 </picture>
+
+---
+
+### GitHub Statistics
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Victor-Magne&show_icons=true&count_private=true&hide_border=true&theme=tokyonight&bg_color=0d1117" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Victor-Magne&show_icons=true&count_private=true&hide_border=true&theme=default" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Victor-Magne&show_icons=true&count_private=true&hide_border=true&theme=tokyonight&bg_color=0d1117" height="165" alt="Victor Gomes GitHub Stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Victor-Magne&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Victor-Magne&layout=compact&hide_border=true&theme=default" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Victor-Magne&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117" height="165" alt="Top Languages" />
+</picture>
+
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Victor-Magne&theme=tokyonight&hide_border=true&background=0d1117" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=Victor-Magne&theme=default&hide_border=true" />
+  <img src="https://streak-stats.demolab.com?user=Victor-Magne&theme=tokyonight&hide_border=true&background=0d1117" alt="GitHub Streak" />
+</picture>
+
+</div>
 
 ---
 
